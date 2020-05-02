@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>02 Teach: Team Activity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="02Teach.css">
 </head>
 
 <body>
-    <div id="div1" class="bold-hover">First div</div>
-    <div id="div2" class="bold-hover">Second div</div>
-    <div id="div3" class="bold-hover">Third div</div>
+    <div id="div1" class="bold-hover container">First div</div>
+    <div id="div2" class="bold-hover container">Second div</div>
+    <div id="div3" class="bold-hover container">Third div</div>
 
-    <button id="button1">Click Me</button> <br><br>
+    <section class="container">
+        <button id="button1">Click Me</button> <br><br>
+    </section>
 
-    <label for="text-color">Text Color: </label> <input type="text" id="text-color">
-    <button id="change-color">Change Color</button>
+    <section class="container">
+        <label for="text-color">Text Color: </label> <input type="text" id="text-color">
+        <button id="change-color">Change Color</button>
+    </section>
 
+    <section class="container">
+        <button id="fade">Fade Third Div</button>
+    </section>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script src="02Teach.js"></script>
 </body>
 

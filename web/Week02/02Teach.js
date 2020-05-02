@@ -2,7 +2,15 @@ document.getElementById("button1").addEventListener("click", function () {
     alert("Clicked!");
 });
 
-document.getElementById("change-color").addEventListener("click", function() {
-    var backgroundColor = document.getElementById("text-color").value;
-    document.getElementById("div1").style.backgroundColor = backgroundColor;
+$(document).ready(function () {
+    $("#change-color").click(function () {
+        let backgroundColor = document.getElementById("text-color").value;
+        $("#div1").css("background-color", backgroundColor);
+    });
+});
+
+$(document).ready(function () {
+    $("#fade").click(function () {
+        $("#div3").fadeToggle(3000);
+    });
 });
