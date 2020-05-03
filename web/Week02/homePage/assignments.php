@@ -18,7 +18,7 @@
     <main>
         <ul id="assignment_list">
             <li><a href="../../hello.html">Week 1</a></li>
-            <li><a href="homepage.php">Week 2</a></li>
+            <li><a href="homePage.php">Week 2</a></li>
             <li>More coming soon ...</li>
         </ul>
     </main>
