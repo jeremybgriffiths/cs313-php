@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.products {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #c4f5ff;
+    padding: 10px;
+    margin: 16px;
+}
+
+#add-to-cart {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #17a2b8;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    display: block;
+    border-radius: 5px;
+    font-size: large;
+    margin: 25px 25px 15px 25px;
+}
+
+.btn-danger {
+    border-radius: 5px;
+    text-align: center;
+}
+
+.table {
+    border: none;
+}
