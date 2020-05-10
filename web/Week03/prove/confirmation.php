@@ -55,11 +55,6 @@
                         <td><?php echo $product["quantity"]; ?></td>
                         <td>$ <?php echo $product["price"]; ?></td>
                         <td>$ <?php echo number_format($product["quantity"] * $product["price"], 2); ?></td>
-                        <td>
-                            <a href="index.php?action=delete&id=<?php echo $product["id"]; ?>">
-                                <div class="btn-danger">Remove</div>
-                            </a>
-                        </td>
                     </tr>
                 <?php
                     $total = $total + ($product["quantity"] * $product["price"]);
