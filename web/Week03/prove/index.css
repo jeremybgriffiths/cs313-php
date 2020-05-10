@@ -16,7 +16,8 @@ h1 {
     margin: 16px;
 }
 
-#add-to-cart {
+#add-to-cart,
+#confirm {
     margin-top: 10px;
 }
 
@@ -38,4 +39,18 @@ h1 {
 
 .table {
     border: none;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#continue-button {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
 }

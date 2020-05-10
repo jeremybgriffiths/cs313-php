@@ -28,23 +28,21 @@ if (filter_input(INPUT_POST, "add-to-cart")) {
         $product_ids = array_column($_SESSION["shopping-cart"], "id");
 
         if (!in_array(filter_input(INPUT_GET, "id"), $product_ids)) {
-            $_SESSION["shopping-cart"][$count] = array (
+            $_SESSION["shopping-cart"][$count] = array(
                 "id" => filter_input(INPUT_GET, "id"),
                 "name" => filter_input(INPUT_POST, "name"),
                 "price" => filter_input(INPUT_POST, "price"),
                 "quantity" => filter_input(INPUT_POST, "quantity")
             );
-        }
-        else {
+        } else {
             for ($i = 0; $i < count($product_ids); $i++) {
                 if ($product_ids[$i] == filter_input(INPUT_GET, "id")) {
                     $_SESSION["shopping-cart"][$i]["quantity"] += filter_input(INPUT_POST, "quantity");
                 }
             }
         }
-    }
-    else {
-        $_SESSION["shopping-cart"][0] = array (
+    } else {
+        $_SESSION["shopping-cart"][0] = array(
             "id" => filter_input(INPUT_GET, "id"),
             "name" => filter_input(INPUT_POST, "name"),
             "price" => filter_input(INPUT_POST, "price"),
@@ -54,7 +52,7 @@ if (filter_input(INPUT_POST, "add-to-cart")) {
 }
 
 if (filter_input(INPUT_GET, "action") == "delete") {
-    foreach($_SESSION["shopping-cart"] as $key => $product) {
+    foreach ($_SESSION["shopping-cart"] as $key => $product) {
         if ($product["id"] == filter_input(INPUT_GET, "id")) {
             unset($_SESSION["shopping-cart"][$key]);
         }
@@ -87,7 +85,7 @@ if (filter_input(INPUT_GET, "action") == "delete") {
                 echo nl2br("\r\n");
                 echo "$" . $product["price"];
                 ?>
-                <form action="index.php?action=add&id=<?php echo $product["id"]; ?>" method = "post">
+                <form action="index.php?action=add&id=<?php echo $product["id"]; ?>" method="post">
                     <input type="text" name="quantity" class="form-control" value="1">
                     <input type="hidden" name="name" value="<?php echo $product["name"]; ?>">
                     <input type="hidden" name="price" value="<?php echo $product["price"]; ?>">
@@ -99,7 +97,11 @@ if (filter_input(INPUT_GET, "action") == "delete") {
         ?>
         <div class="table-responsive">
             <table class="table">
-                <tr><th colspan="5"><h3>Order</h3></th></tr>
+                <tr>
+                    <th colspan="5">
+                        <h3>Order</h3>
+                    </th>
+                </tr>
                 <tr>
                     <th width="40%">Product Name</th>
                     <th width="10%">Quantity</th>
@@ -110,7 +112,7 @@ if (filter_input(INPUT_GET, "action") == "delete") {
                 <?php
                 if (!empty($_SESSION["shopping-cart"])) {
                     $total = 0;
-                    foreach($_SESSION["shopping-cart"] as $key => $product) {
+                    foreach ($_SESSION["shopping-cart"] as $key => $product) {
                 ?>
                         <tr>
                             <td><?php echo $product["name"]; ?></td>
@@ -123,29 +125,28 @@ if (filter_input(INPUT_GET, "action") == "delete") {
                                 </a>
                             </td>
                         </tr>
-                        <?php
-                            $total = $total + ($product["quantity"] * $product["price"]);
-                        
+                    <?php
+                        $total = $total + ($product["quantity"] * $product["price"]);
                     }
-                        ?>
-                        <tr>
-                            <td colspan = "3" align="right">Total</td>
-                            <td align="right">$ <?php echo number_format($total, 2); ?></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">
-                                <?php
-                                    if (isset($_SESSION["shopping-cart"])) {
-                                        if (count($_SESSION["shopping-cart"]) > 0) {
-                                ?>
-                                            <a href="#" class="button">Checkout</a>
-                                <?php            
-                                        }
-                                    }
-                                ?>
-                            </td>
-                        </tr>
+                    ?>
+                    <tr>
+                        <td colspan="3" align="right">Total</td>
+                        <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <?php
+                            if (isset($_SESSION["shopping-cart"])) {
+                                if (count($_SESSION["shopping-cart"]) > 0) {
+                            ?>
+                                    <a href="checkout.php" class="button">Checkout</a>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </td>
+                    </tr>
                 <?php
                 }
                 ?>
