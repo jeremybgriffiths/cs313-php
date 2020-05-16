@@ -1,7 +1,9 @@
+-- Clean up
 DROP TABLE IF EXISTS Checkout;
 DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Books;
 
+-- Setup tables
 CREATE TABLE Books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(256) NOT NULL,
@@ -18,8 +20,8 @@ CREATE TABLE Users (
 
 CREATE TABLE Checkout (
     id SERIAL PRIMARY KEY,
-    bookid INT REFERENCES Books(id),
-    userid INT REFERENCES Users(id),
+    bookid INT NOT NULL REFERENCES Books(id),
+    userid INT NOT NULL REFERENCES Users(id),
     checkout_date DATE,
     checkin_date DATE,
     fine INT
