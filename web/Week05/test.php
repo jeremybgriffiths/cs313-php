@@ -20,7 +20,7 @@ require_once('../../db/connectToDb.php');
 foreach ($dbUrl->query('SELECT username, userpassword FROM users') as $row)
 {
   echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
+  echo ' password: ' . $row['userpassword'];
   echo '<br/>';
 };
 ?>
