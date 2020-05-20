@@ -17,7 +17,7 @@ require_once('../../db/connectToDb.php');
 </html>
 
 <?php
-foreach ($dbUrl->query('SELECT username, userpassword FROM users') as $row)
+foreach ($dbUrl->query('SELECT username, userpassword FROM Users') as $row)
 {
   echo 'user: ' . $row['username'];
   echo ' password: ' . $row['userpassword'];
