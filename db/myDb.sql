@@ -29,4 +29,7 @@ CREATE TABLE Checkout (
 
 -- Insert test data
 INSERT INTO Users(username, userpassword, isadmin) VALUES('admin', 'admin', TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian1', 'librarian1', TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian2', 'librarian2', TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('patron1', 'patron1', FALSE);
 INSERT INTO Books(username, userpassword, isadmin) VALUES('The Hobbit', 'J.R.R Tolkien', 'Fantasy');
