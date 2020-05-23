@@ -11,9 +11,11 @@ require_once('../../db/connectToDb.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link>
 </head>
 
 <body>
+    <form action=""></form>
     <?php
     $bookAuthor = 'Tolkien, J.R.R.';
     $stmt = $db->prepare("SELECT title, author, genre FROM Books Where author = '$bookAuthor'");
