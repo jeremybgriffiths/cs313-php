@@ -26,7 +26,7 @@
             <?php foreach ($rows as $row) {
             ?>
                 <tr>
-                    <td><?php echo $row["id"]; ?> </td>
+                    <td><?php echo $row; ?> </td>
                     <td><?php echo $row["title"]; ?> </td>
                     <td><?php echo $row["author"]; ?> </td>
                     <td><?php echo $row["genre"]; ?> </td>
