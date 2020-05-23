@@ -17,7 +17,13 @@ require_once('../../db/connectToDb.php');
 </html>
 
 <?php
-foreach ($db->query('SELECT username, userpassword FROM Users') as $row)
+
+
+$stmt = $db->prepare('SELECT * FROM Users');
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($rows as $row)
 {
   echo 'user: ' . $row['username'];
   echo ' password: ' . $row['userpassword'];
