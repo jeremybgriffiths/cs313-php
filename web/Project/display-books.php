@@ -9,34 +9,33 @@
     include("../../db/connectToDb.php");
     $search = $_REQUEST["search"];
 
-    $query = "select ISBN,Title,Author,Edition,Publication from book_info where title like '%$search%'";
-    $result = mysqli_query($db, $query);
+    $stmt = $db->prepare("SELECT id, title, author, genre from Books where title like '%$search%'");
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    if (mysqli_num_rows($result) > 0) if (mysqli_num_rows($result) > 0) {
+    if (count($rows) > 0) {
     ?>
         <table>
             <tr>
-                <th> ISBN </th>
+                <th> ID </th>
                 <th> Title </th>
                 <th> Author </th>
-                <th> Edition </th>
-                <th> Publication </th>
+                <th> Genre </th>
             </tr>
 
-            <?php while ($row = mysqli_fetch_assoc($result)) {
+            <?php foreach ($rows as $row) {
             ?>
                 <tr>
-                    <td><?php echo $row["ISBN"]; ?> </td>
-                    <td><?php echo $row["Title"]; ?> </td>
-                    <td><?php echo $row["Author"]; ?> </td>
-                    <td><?php echo $row["Edition"]; ?> </td>
-                    <td><?php echo $row["Publication"]; ?> </td>
+                    <td><?php echo $row["id"]; ?> </td>
+                    <td><?php echo $row["title"]; ?> </td>
+                    <td><?php echo $row["author"]; ?> </td>
+                    <td><?php echo $row["genre"]; ?> </td>
                 </tr>
-        <?php
+            <?php
             }
-        } else
-            echo "<center>No books found in the library by the name $search </center>";
-        ?>
+    } else
+        echo "<center>No books found in the library by the name $search </center>";
+            ?>
         </table>
 </body>
 
