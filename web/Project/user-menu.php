@@ -16,7 +16,7 @@ require_once('../../db/connectToDb.php');
 <body>
     <?php
     $bookAuthor = 'Tolkien, J.R.R.';
-    $stmt = $db->prepare("SELECT title, author, genre FROM Books Where title = '$book'");
+    $stmt = $db->prepare("SELECT title, author, genre FROM Books Where title = '$bookAuthor'");
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
