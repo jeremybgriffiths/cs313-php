@@ -1,25 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 
-<body bgcolor="87ceeb">
-    <center>
-        <h2>Simple Library Management System</h2>
-    </center>
+<body>
+    <h2>Simple Library Management System</h2>
     <br>
 
     <?php
-    include("DBConnection.php");
-
+    include("../../db/connectToDb.php");
     $search = $_REQUEST["search"];
 
-    $query = "select ISBN,Title,Author,Edition,Publication from book_info where title like '%$search%'"; //search with a book name in the table book_info
+    $query = "select ISBN,Title,Author,Edition,Publication from book_info where title like '%$search%'";
     $result = mysqli_query($db, $query);
 
     if (mysqli_num_rows($result) > 0) if (mysqli_num_rows($result) > 0) {
     ?>
-
-        <table border="2" align="center" cellpadding="5" cellspacing="5">
-
+        <table>
             <tr>
                 <th> ISBN </th>
                 <th> Title </th>

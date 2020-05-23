@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 
-<body bgcolor="87ceeb">
+<body>
     <div>
         <h2>Simple Library Management System</h2>
     </div>
