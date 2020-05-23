@@ -26,3 +26,7 @@ CREATE TABLE Checkout (
     checkin_date DATE,
     fine INT
 );
+
+-- Insert test data
+INSERT INTO Users(username, userpassword, isadmin) VALUES('admin', 'admin', TRUE);
+INSERT INTO Books(username, userpassword, isadmin) VALUES('The Hobbit', 'J.R.R Tolkien', 'Fantasy');
