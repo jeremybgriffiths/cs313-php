@@ -32,4 +32,14 @@ INSERT INTO Users(username, userpassword, isadmin) VALUES('admin', 'admin', TRUE
 INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian1', 'librarian1', TRUE);
 INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian2', 'librarian2', TRUE);
 INSERT INTO Users(username, userpassword, isadmin) VALUES('patron1', 'patron1', FALSE);
-INSERT INTO Books(username, userpassword, isadmin) VALUES('The Hobbit', 'J.R.R Tolkien', 'Fantasy');
+INSERT INTO Users(username, userpassword, isadmin) VALUES('patron2', 'patron2', FALSE);
+
+INSERT INTO Books(title, author, genre) VALUES('The Hobbit', 'Tolkien, J.R.R.', 'Fantasy');
+INSERT INTO Books(title, author, genre) VALUES('The Lord of the Rings: Fellowship of the Ring', 'Tolkien, J.R.R.', 'Fantasy');
+INSERT INTO Books(title, author, genre) VALUES('The Lord of the Rings: The Two Towers', 'Tolkien, J.R.R.', 'Fantasy');
+INSERT INTO Books(title, author, genre) VALUES('The Lord of the Rings: Return of the King', 'Tolkien, J.R.R.', 'Fantasy');
+INSERT INTO Books(title, author, genre) VALUES('A Tale of Two Cities', 'Dickens, Charles', 'Historical Fiction');
+INSERT INTO Books(title, author, genre) VALUES('And Then There Were None', 'Christie, Agatha', 'Mystery');
+INSERT INTO Books(title, author, genre) VALUES('Alice''s Adventures in Wonderland', 'Carroll, Lewis', 'Fantasy');
+INSERT INTO Books(title, author, genre) VALUES('The Da Vinci Code', 'Brown, Dan', 'Mystery');
+INSERT INTO Books(title, author, genre) VALUES('The Catcher in the Rye', 'Salinger, J.D.', 'Young Adult Fiction');
