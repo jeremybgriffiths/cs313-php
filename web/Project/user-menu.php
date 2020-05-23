@@ -15,15 +15,15 @@ require_once('../../db/connectToDb.php');
 
 <body>
     <?php
-
-
-    $stmt = $db->prepare('SELECT * FROM Users');
+    $book = 'The Hobbit';
+    $stmt = $db->prepare('SELECT title, author, genre FROM Books Where title = $book');
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($rows as $row) {
-        echo 'user: ' . $row['username'];
-        echo ' password: ' . $row['userpassword'];
+        echo 'Title: ' . $row['title'];
+        echo ' author: ' . $row['author'];
+        echo ' genre: ' . $row['genre'];
         echo '<br/>';
     };
     ?>
