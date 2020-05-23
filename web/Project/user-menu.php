@@ -16,7 +16,7 @@ require_once('../../db/connectToDb.php');
 <body>
     <?php
     $book = 'The Hobbit';
-    $stmt = $db->prepare('SELECT title, author, genre FROM Books Where title = $book');
+    $stmt = $db->prepare("SELECT title, author, genre FROM Books Where title = '$book'");
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
