@@ -9,17 +9,15 @@
 </head>
 
 <body>
-    <div id="header">
-        <h2>Simple Library Management System</h2>
-    </div>
+    <h1>Book Search</h1>
     <form action="display-books.php" method="get">
         <br>
         <div>
             <p>Enter the title of the book to be searched: </p>
             <input type="text" name="search" size="48">
             <br></br>
-            <input type="submit" value="submit">
-            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
         </div>
         <br>
     </form>

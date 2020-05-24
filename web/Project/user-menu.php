@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <form action=""></form>
+    <button>Search for Books</button>
+    <button>View all books</button>
 </body>
 
 </html>

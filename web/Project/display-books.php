@@ -2,7 +2,7 @@
 <html>
 
 <body>
-    <h2>Simple Library Management System</h2>
+    <h2>Results</h2>
     <br>
 
     <?php
