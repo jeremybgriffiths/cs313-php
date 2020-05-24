@@ -21,7 +21,7 @@
         echo $passwordDB;
         echo " " . $inPassword;
 
-        if ($row && password_verify($inPassword, $passwordDB)) {
+        if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
             header("location: user-menu.php");
         } else {
