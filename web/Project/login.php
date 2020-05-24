@@ -18,6 +18,9 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
 
+        echo $passwordDB;
+        echo " " . $inPassword;
+
         if ($row && password_verify($inPassword, $passwordDB)) {
             $_SESSION['username'] = $inUsername;
             header("location: user-menu.php");
