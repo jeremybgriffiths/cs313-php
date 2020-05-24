@@ -7,7 +7,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($_POST['username']) || empty($_POST['password'])) {
             echo
-                "Incorrect username or password1";
+                "Incorrect username or password";
             header("location: login-form.php");
         }
 
@@ -16,12 +16,13 @@
         $stmt = $db->prepare("SELECT username, userpassword FROM Users WHERE username = ?");
         $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
+        $passwordDB = $row["userpassword"];
 
         if ($row && password_verify($inPassword, $passwordDB)) {
             $_SESSION['username'] = $inUsername;
             header("location: user-menu.php");
         } else {
-            echo "Incorrect username or password2";
+            echo "Incorrect username or password";
     ?>
             <a href="login-form.php">Login</a>
     <?php
