@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Menu</title>
-</head>
-
+<html>
+<title>User Menu</title>
 <body>
-    <a href="search-books.php"> To search for the Book information click here </a>
+ <?php
+     session_start();
+     $username = $_SESSION['username'];
+ ?>
+ 
+ <div style="text-align:center"><h1>User Menu</h1></div>
+ <br/>
+ 
+ <div style="font-weight:bold"> Welcome <?php echo $username ?> </div>
+  
+ <div style="text-align: right"><a href="logout.php">Logout</a></div>
+ 
+ <?php
+ if(!isset($_SESSION['username']))
+ {
+     header("location:login-form.php");
+ }
+ ?>
 </body>
-
 </html>
