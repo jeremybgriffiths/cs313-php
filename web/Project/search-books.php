@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Search</title>
     <link rel="stylesheet" href="styles/search-books.css">
 </head>
 
 <body>
     <h1>Book Search</h1>
     <form action="display-books.php" method="get">
-        <br>
         <div>
             <p>Enter the title of the book to be searched: </p>
             <input type="text" name="search" size="48">
