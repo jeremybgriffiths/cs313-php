@@ -7,7 +7,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($_POST['username']) || empty($_POST['password'])) {
             echo
-                "Incorrect username or password";
+                "Incorrect username or password1";
             header("location: login-form.php");
         }
 
@@ -21,7 +21,7 @@
             $_SESSION['username'] = $inUsername;
             header("location: user-menu.php");
         } else {
-            echo "Incorrect username or password";
+            echo "Incorrect username or password2";
     ?>
             <a href="login-form.php">Login</a>
     <?php
