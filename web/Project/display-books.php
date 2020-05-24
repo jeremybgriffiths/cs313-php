@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" href="styles/search-books.css">
+    <link rel="stylesheet" href="styles/display-books.css">
 </head>
 
 <body>
