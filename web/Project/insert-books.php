@@ -11,11 +11,8 @@
     $author = $_POST["author"];
     $edition = $_POST["genre"];
 
-    $stmt = $this->pdo->prepare("INSERT INTO Books(title, author, genre) VALUES('$title', '$author', '$genre')");
-    $stmt->bindValue(':title', $title);
-    $stmt->bindValue(':author', $author);
-    $stmt->bindValue(':genre', $genre);
-    $stmt->execute();
+    $stmt = "INSERT INTO Books(title, author, genre) VALUES('$title', '$author', '$genre')";
+    $result = pg_query($stmt);
     ?>
 
     <h3> Book information is inserted successfully </h3>
