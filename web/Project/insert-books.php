@@ -11,7 +11,8 @@
     $author = $_POST["author"];
     $edition = $_POST["genre"];
 
-    $stmt = "INSERT INTO Books(title, author, genre) VALUES('$title', '$author', '$genre')";
+    $stmt = $db->prepare("INSERT INTO Books(title, author, genre) VALUES('$title', '$author', '$genre')");
+    $stmt->execute();
     $result = pg_query($stmt);
     ?>
 
