@@ -14,7 +14,7 @@
     include("../../db/connectToDb.php");
     $search = $_REQUEST["search"];
 
-    $stmt = $db->prepare("SELECT id, title, author, genre from Books where title like '%$search%'");
+    $stmt = $db->prepare("SELECT id, title, author, genre FROM Books WHERE LOWER(title) LIKE LOWER('%$search%')");
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
