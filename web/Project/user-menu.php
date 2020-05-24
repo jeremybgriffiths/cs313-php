@@ -8,8 +8,7 @@
 </head>
 
 <body>
-    <button>Search for Books</button>
-    <button>View all books</button>
+    <a href="search-books.php"> To search for the Book information click here </a>
 </body>
 
 </html>

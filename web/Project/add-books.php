@@ -1,39 +1,34 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
-<body bgcolor="87ceeb">
-    <center>
-        <h2>Simple Library Management System</h2>
-    </center>
-    <!--Once the form is submitted, all the form data is forwarded to InsertBooks.php -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="styles/search-books.css">
+</head>
+
+<body>
+    <h1>Add Books</h1>
     <form action="insert-books.php" method="post">
-
-        <table border="2" align="center" cellpadding="5" cellspacing="5">
+        <table>
             <tr>
-                <td> Enter ISBN :</td>
-                <td> <input type="text" name="isbn" size="48"> </td>
-            </tr>
-            <tr>
-                <td> Enter Title :</td>
+                <td> Enter Title:</td>
                 <td> <input type="text" name="title" size="48"> </td>
             </tr>
             <tr>
-                <td> Enter Author :</td>
+                <td> Enter Author:</td>
                 <td> <input type="text" name="author" size="48"> </td>
             </tr>
             <tr>
-                <td> Enter Edition :</td>
-                <td> <input type="text" name="edition" size="48"> </td>
-            </tr>
-            <tr>
-                <td> Enter Publication: </td>
-                <td> <input type="text" name="publication" size="48"> </td>
+                <td> Enter Genre:</td>
+                <td> <input type="text" name="genre" size="48"> </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <input type="submit" value="submit">
-                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
                 </td>
             </tr>
         </table>
