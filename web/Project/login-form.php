@@ -10,7 +10,7 @@
 
 <body>
     <div style="text-align:center">
-        <h1>PHP Login Form using MySQL</h1>
+        <h1>Library Management</h1>
     </div>
     <br>
     <form name="login" method="post" action="login.php" onsubmit="return validate();">

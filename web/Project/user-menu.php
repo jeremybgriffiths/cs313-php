@@ -10,6 +10,7 @@
  <br/>
  
  <div style="font-weight:bold"> Welcome <?php echo $username ?> </div>
+ <a href="search-books.php"></a>
   
  <div style="text-align: right"><a href="logout.php">Logout</a></div>
  
