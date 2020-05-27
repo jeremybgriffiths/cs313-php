@@ -61,6 +61,8 @@ try
 
 		$statement->bindValue(':name', $topicName);
 
+		$statement->execute();
+
 		$topicId = $db->lastInsertId("topic_id_seq");
 
         // Now add that topic to the array of topics as we are assuming the user wants to add that topic to this scripture
