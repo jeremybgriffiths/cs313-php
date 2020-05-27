@@ -65,6 +65,7 @@ include("../../db/connectToDb.php");
 				$statement->execute();
 
 				// Go through each result
+				$nextId = 0;
 				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 					$id = $row['id'];
 					$name = $row['name'];
@@ -81,6 +82,7 @@ include("../../db/connectToDb.php");
 
 					// put a newline out there just to make our "view source" experience better
 					echo "\n";
+					$nextId++;
 				}
 			} catch (PDOException $ex) {
 				// Please be aware that you don't want to output the Exception message in
