@@ -76,9 +76,6 @@ function insertTopic()
         die();
     }
 
-    // finally, redirect them to a new page to actually show the topics
-    header("Location: showTopics.php");
-
     die(); // we always include a die after redirects. In this case, there would be no
     // harm if the user got the rest of the page, because there is nothing else
     // but in general, there could be things after here that we don't want them
