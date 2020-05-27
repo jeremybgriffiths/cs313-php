@@ -52,6 +52,19 @@ try
 	// get the new id
 	$scriptureId = $db->lastInsertId("scripture_id_seq");
 
+	if(isset($_POST['addNewTopic'])) {
+        // Get the topic name
+        $topicName = $_POST['newTopic'];
+        $topicId = addNewTopic($topicName);
+
+        //echo "Topic ID: " . $topicId;
+
+        // Now add that topic to the array of topics as we are assuming the user wants to add that topic to this scripture
+        array_push($topicIds, $topicId);
+
+       // print_r($topicIds);
+    }
+
 	// Now go through each topic id in the list from the user's checkboxes
 	foreach ($topicIds as $topicId)
 	{
