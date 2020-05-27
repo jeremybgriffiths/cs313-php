@@ -54,7 +54,14 @@ try
 
 	if(isset($_POST['addNewTopic'])) {
         // Get the topic name
-        $topicName = $_POST['newTopic'];
+		$topicName = $_POST['newTopic'];
+
+		$query = 'INSERT INTO topic(name) VALUES(:name)';
+		$statement = $db->prepare($query);
+
+		$statement->bindValue(':name', $topicName);
+
+		$topicId = $db->lastInsertId("topic_id_seq");
 
         // Now add that topic to the array of topics as we are assuming the user wants to add that topic to this scripture
         array_push($topicIds, $topicId);
