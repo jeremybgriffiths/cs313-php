@@ -127,4 +127,7 @@ function showTopics()
         echo "Error with DB. Details: $ex";
         die();
     }
+    header("Location: topicEntry.php");
+
+    die();
 }
