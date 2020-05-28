@@ -105,9 +105,9 @@ include("./teamActivityFunctions.php");
 
 			<h1>Scripture and Topic List</h1>
 			<?php
-			// if (isset($_POST)) {
-			// 	insertTopic();
-			// }
+			if (isset($_POST['submit'])) {
+				insertTopic();
+			}
 			showTopics();
 			?>
 		</div>
