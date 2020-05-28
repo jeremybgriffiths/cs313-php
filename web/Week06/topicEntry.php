@@ -14,7 +14,7 @@
 include("../../db/connectToDb.php");
 include("./teamActivityFunctions.php");
 
-if (isset($_POST)) {
+if (isset($_POST["submit"])) {
 	insertTopic();
 }
 ?>
