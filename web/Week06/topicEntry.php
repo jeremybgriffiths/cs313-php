@@ -30,10 +30,11 @@ include("./teamActivityFunctions.php");
 				if (isset($_POST['txtBook'])) {
 					insertTopic();
 				}
+				showTopics();
 				?>
 			}
 		};
-		xmlhttp.open("POST", "gethint.php?q=" + str, true);
+		xmlhttp.open("POST", "topicEntry.php" , true);
 		xmlhttp.send();
 	</script>
 	<title>Topic Entry</title>
@@ -120,11 +121,7 @@ include("./teamActivityFunctions.php");
 			<input type="submit" value="Add to Database" />
 		</form>
 		<div>
-
 			<h1>Scripture and Topic List</h1>
-			<?php
-			showTopics();
-			?>
 		</div>
 	</div>
 
