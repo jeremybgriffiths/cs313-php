@@ -13,6 +13,10 @@
 // in each of our different PHP files.
 include("../../db/connectToDb.php");
 include("./teamActivityFunctions.php");
+
+if (isset($_POST)) {
+	insertTopic();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -105,9 +109,6 @@ include("./teamActivityFunctions.php");
 
 			<h1>Scripture and Topic List</h1>
 			<?php
-			if (isset($_POST)) {
-				insertTopic();
-			}
 			showTopics();
 			?>
 		</div>
