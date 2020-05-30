@@ -24,14 +24,13 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = $row["isadmin"];
-        echo "<script>console.log(" . $isAdmin . ")</script>";
 
         echo $passwordDB;
         echo " " . $inPassword;
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
-            if ($isAdmin) {
+            if ($isAdmin == 1) {
                 header("location: admin-menu.php");
             } else {
                 header("location: user-menu.php");
