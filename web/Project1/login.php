@@ -19,16 +19,11 @@
 
         $inUsername = $_POST["username"];
         $inPassword = $_POST["password"];
-        $stmt = $db->prepare("SELECT username, userpassword FROM Users WHERE username = ?");
+        $stmt = $db->prepare("SELECT username, userpassword, isadmin FROM Users WHERE username = ?");
         $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = (bool)$row["isadmin"];
-
-        echo $isAdmin;
-
-        echo $passwordDB;
-        echo " " . $inPassword;
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
@@ -38,7 +33,7 @@
             } else {
                 $header = "location: user-menu.php";
             }
-            //header($header);
+            header($header);
         } else {
             echo "Incorrect username or password";
     ?>
