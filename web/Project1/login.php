@@ -1,4 +1,10 @@
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
 
 <body>
     <?php
@@ -18,7 +24,7 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = $row["isadmin"];
-        echo "<script>console.log($isAdmin)</script>";
+        echo "<script>console.log(" . $isAdmin . ")</script>";
 
         echo $passwordDB;
         echo " " . $inPassword;
