@@ -11,3 +11,7 @@ body {
     border: solid black 1px;
     border-collapse: collapse;
   }
+
+  table {
+    background-color: white;
+  }
