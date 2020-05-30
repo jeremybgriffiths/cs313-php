@@ -16,7 +16,7 @@
     $bookId = $_POST['book-id'];
     $userId = $_POST['user-id'];
 
-    $checkoutDate = new DateTime();
+    $checkoutDate = date("F j, Y, g:i a");
     echo $checkoutDate;
 
     $stmt = $db->prepare('INSERT INTO Checkout(bookid, userid, checkout_date) VALUES(:bookId, :userId, :checkoutDate)');
