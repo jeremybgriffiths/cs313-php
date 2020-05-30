@@ -9,3 +9,7 @@ header a {
 body {
     background-color: bisque;
 }
+
+#welcome {
+    font-weight:bold;
+}
