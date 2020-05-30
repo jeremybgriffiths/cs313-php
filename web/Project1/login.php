@@ -25,6 +25,8 @@
         $passwordDB = $row["userpassword"];
         $isAdmin = (bool)$row["isadmin"];
 
+        echo $isAdmin;
+
         echo $passwordDB;
         echo " " . $inPassword;
 
@@ -36,7 +38,7 @@
             } else {
                 $header = "location: user-menu.php";
             }
-            header($header);
+            //header($header);
         } else {
             echo "Incorrect username or password";
     ?>
