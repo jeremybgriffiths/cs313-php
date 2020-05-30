@@ -29,7 +29,7 @@
             ?>
                 <tr>
                     <td><?php echo $row["username"]; ?> </td>
-                    <td><?php echo $row["isadmin"] ? true : false; ?> </td>
+                    <td><?php echo $row["isadmin"] ? 'true' : 'false'; ?> </td>
                 </tr>
         <?php
             }
