@@ -14,7 +14,7 @@
     include("../../db/connectToDb.php");
 
     $stmt = $db->prepare(
-        "SELECT b.title, b.author, b.genre, u.username 
+        "SELECT b.title, b.author, b.genre, u.username, c.checkout_date 
             FROM Books b 
             JOIN Checkout c ON c.bookid = b.id
             JOIN Users u ON u.id = c.userid"
@@ -31,6 +31,7 @@
                 <th>Author</th>
                 <th>Genre</th>
                 <th>Username</th>
+                <th>Checkout Date</th>
             </tr>
 
             <?php foreach ($rows as $row) {
@@ -40,6 +41,7 @@
                     <td><?php echo $row["author"]; ?> </td>
                     <td><?php echo $row["genre"]; ?> </td>
                     <td><?php echo $row["username"]; ?> </td>
+                    <td><?php echo $row["checkout_date"]; ?> </td>
                 </tr>
         <?php
             }
