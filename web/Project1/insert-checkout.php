@@ -19,8 +19,8 @@
 
     $stmt = $db->prepare('INSERT INTO Checkout(bookid, userid, checkout_date) VALUES(:bookId, :userId, :checkoutDate)');
     $stmt->bindValue(':bookId', $bookId);
-    $stmt->bindValue(':userId', $bookId);
-    $stmt->bindValue(':checkoutDate', $bookId);
+    $stmt->bindValue(':userId', $userId);
+    $stmt->bindValue(':checkoutDate', $checkoutDate);
 
     $stmt->execute();
     ?>
