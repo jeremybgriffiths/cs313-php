@@ -18,7 +18,7 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = $row["isadmin"];
-        echo $isAdmin;
+        echo "<script>console.log($isAdmin)</script>";
 
         echo $passwordDB;
         echo " " . $inPassword;
