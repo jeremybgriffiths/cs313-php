@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -17,14 +16,6 @@
     $title = $_POST["title"];
     $author = $_POST["author"];
     $genre = $_POST["genre"];
-
-    $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
-
-		// Then, bind the values
-		$statement->bindValue(':scriptureId', $scriptureId);
-		$statement->bindValue(':topicId', $topicId);
-
-		$statement->execute();
 
     $stmt = $db->prepare('INSERT INTO Books(title, author, genre) VALUES(:title, :author, :genre)');
 
