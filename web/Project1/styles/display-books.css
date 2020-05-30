@@ -1,17 +1,19 @@
 body {
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  table, th, td {
-    text-align: left;
-    padding: 10px;
-    border: solid black 1px;
-    border-collapse: collapse;
-  }
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  table {
-    background-color: white;
-  }
+table,
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+
+table {
+  background-color: white;
+}
