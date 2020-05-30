@@ -24,7 +24,8 @@
             <button formaction="view-books.php">View Books</button>
             <button formaction="view-users.php">View users</button>
             <button formaction="search-books.php">Search for a Book</button>
-            <button formaction="add-books.php">Add books</button>
+            <button formaction="add-books.php">Add book</button>
+            <button formaction="issue-book.php">Issue book</button>
         </form>
     </div>
 

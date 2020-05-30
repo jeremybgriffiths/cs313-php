@@ -24,9 +24,11 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = (bool)$row["isadmin"];
+        $userid = $row["userid"];
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
+            $_SESSION['userid'] = $userid;
             $header = null;
             if ($isAdmin) {
                 $header = "location: admin-menu.php";

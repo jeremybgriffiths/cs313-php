@@ -24,8 +24,6 @@
     $stmt->bindValue(':genre', $genre);
 
     $stmt->execute();
-
-    // $result = pg_query($stmt);
     ?>
 
     <h3> Book information is inserted successfully </h3>

@@ -23,8 +23,7 @@ CREATE TABLE Checkout (
     bookid INT NOT NULL REFERENCES Books(id),
     userid INT NOT NULL REFERENCES Users(id),
     checkout_date DATE,
-    checkin_date DATE,
-    fine INT
+    checkin_date DATE
 );
 
 -- Insert test data
