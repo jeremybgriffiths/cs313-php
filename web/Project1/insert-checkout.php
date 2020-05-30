@@ -13,8 +13,9 @@
     <?php
     include("../../db/connectToDb.php");
 
-    $bookId = $_POST["book-id"];
-    $userId = $_POST["user-id"];
+    $bookId = $_POST['book-id'];
+    $userId = $_POST['user-id'];
+    echo $bookId . " " . $userId;
     $checkoutDate = new DateTime('now');
 
     $stmt = $db->prepare('INSERT INTO Checkout(bookid, userid, checkout_date) VALUES(:bookId, :userId, :checkoutDate)');
