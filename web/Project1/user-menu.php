@@ -1,5 +1,12 @@
 <html>
-<title>User Menu</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Menu</title>
+    <link rel="stylesheet" href="styles/user-menu.css">
+</head>
 
 <body>
     <?php
@@ -7,16 +14,16 @@
     $username = $_SESSION['username'];
     ?>
 
-    <div style="text-align:center">
+    <header>
         <h1>User Menu</h1>
-    </div>
-    <br />
+        <div style="text-align: right"><a href="logout.php">Logout</a></div>
+    </header>
 
     <div style="font-weight:bold"> Welcome <?php echo $username ?> </div>
     <a href="search-books.php">Search for a Book</a>
     <a href="add-books.php"></a>
 
-    <div style="text-align: right"><a href="logout.php">Logout</a></div>
+
 
     <?php
     if (!isset($_SESSION['username'])) {
