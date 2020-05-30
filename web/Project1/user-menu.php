@@ -22,8 +22,8 @@
     <div id="options">
         <form>
             <button formaction="view-books.php">View Books</button>
-            <a href="search-books.php">Search for a Book</a>
-            <a href="add-books.php">Add books</a>
+            <button formaction="search-books.php">Search for a Book</button>
+            <button formaction="add-books.php">Add books</button>
         </form>
     </div>
 
