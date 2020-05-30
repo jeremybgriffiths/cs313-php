@@ -9,11 +9,25 @@
 
     $title = $_POST["title"];
     $author = $_POST["author"];
-    $edition = $_POST["genre"];
+    $genre = $_POST["genre"];
 
-    $stmt = $db->prepare("INSERT INTO Books(title, author, genre) VALUES('$title', '$author', '$genre')");
+    $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
+
+		// Then, bind the values
+		$statement->bindValue(':scriptureId', $scriptureId);
+		$statement->bindValue(':topicId', $topicId);
+
+		$statement->execute();
+
+    $stmt = $db->prepare('INSERT INTO Books(title, author, genre) VALUES(:title, :author, :genre)');
+
+    $stmt->bindValue(':title', $title);
+    $stmt->bindValue(':author', $author);
+    $stmt->bindValue(':genre', $genre);
+
     $stmt->execute();
-    $result = pg_query($stmt);
+
+    // $result = pg_query($stmt);
     ?>
 
     <h3> Book information is inserted successfully </h3>
