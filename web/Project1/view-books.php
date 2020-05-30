@@ -12,9 +12,8 @@
     <h2>Results</h2>
     <?php
     include("../../db/connectToDb.php");
-    $search = $_REQUEST["search"];
 
-    $stmt = $db->prepare("SELECT title, author, genre FROM Books WHERE LOWER(title) LIKE LOWER('%$search%') ORDER BY title");
+    $stmt = $db->prepare("SELECT title, author, genre FROM Books ORDER BY title");
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

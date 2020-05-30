@@ -19,6 +19,7 @@
     </header>
 
     <div id="welcome"> Welcome <?php echo $username ?> </div>
+    <a href="view-books.php">View Books</a>
     <a href="search-books.php">Search for a Book</a>
     <a href="add-books.php">Add books</a>
 
