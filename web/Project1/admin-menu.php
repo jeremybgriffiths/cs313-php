@@ -22,7 +22,9 @@
     <div id="options">
         <form>
             <button formaction="view-books.php">View Books</button>
+            <button formaction="view-users.php">View users</button>
             <button formaction="search-books.php">Search for a Book</button>
+            <button formaction="add-books.php">Add books</button>
         </form>
     </div>
 

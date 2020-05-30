@@ -17,13 +17,18 @@
         $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
+        $isAdmin = $row["isadmin"];
 
         echo $passwordDB;
         echo " " . $inPassword;
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
-            header("location: user-menu.php");
+            if ($isAdmin == true) {
+                header("location: admin-menu.php");
+            } else {
+                header("location: user-menu.php");
+            }
         } else {
             echo "Incorrect username or password";
     ?>
