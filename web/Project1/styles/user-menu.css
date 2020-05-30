@@ -16,5 +16,6 @@ body {
 
 #options {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    
 }
