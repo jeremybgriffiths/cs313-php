@@ -30,11 +30,13 @@
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
-            if ($isAdmin == 1) {
-                header("location: admin-menu.php");
+            $header = null;
+            if ($isAdmin) {
+                $header = "location: admin-menu.php";
             } else {
-                header("location: user-menu.php");
+                $header = "location: user-menu.php";
             }
+            header($header);
         } else {
             echo "Incorrect username or password";
     ?>
