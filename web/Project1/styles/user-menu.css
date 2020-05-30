@@ -13,3 +13,8 @@ body {
 #welcome {
     font-weight:bold;
 }
+
+#options {
+    display: flex;
+    align-items: center;
+}
