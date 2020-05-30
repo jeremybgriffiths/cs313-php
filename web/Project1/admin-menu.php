@@ -14,7 +14,7 @@
     ?>
 
     <header>
-        <h1>User Menu</h1>
+        <h1>Admin Menu</h1>
         <div style="text-align: right"><a href="logout.php">Logout</a></div>
     </header>
 
