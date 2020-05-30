@@ -20,7 +20,7 @@
 
     <div id="welcome"> Welcome <?php echo $username ?> </div>
     <div id="options">
-        <form action="view-books.php">
+        <form>
             <button formaction="view-books.php">View Books</button>
             <a href="search-books.php">Search for a Book</a>
             <a href="add-books.php">Add books</a>
