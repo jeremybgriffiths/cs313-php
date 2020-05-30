@@ -37,6 +37,7 @@
             echo "<center>No users found</center>";
         ?>
         </table>
+        <a href="javascript:history.back()">Go Back</a>
 </body>
 
 </html>

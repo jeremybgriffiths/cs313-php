@@ -18,6 +18,7 @@
             <input type="submit" value="Submit">
             <input type="reset" value="Clear">
         </div>
+        <a href="javascript:history.back()">Go Back</a>
         <br>
     </form>
 </body>
