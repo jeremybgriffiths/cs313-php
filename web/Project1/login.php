@@ -24,7 +24,7 @@
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
-            if ($isAdmin == true) {
+            if ($isAdmin) {
                 header("location: admin-menu.php");
             } else {
                 header("location: user-menu.php");
