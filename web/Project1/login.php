@@ -23,7 +23,7 @@
         $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
-        $isAdmin = $row["isadmin"];
+        $isAdmin = (bool)$row["isadmin"];
 
         echo $passwordDB;
         echo " " . $inPassword;
