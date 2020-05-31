@@ -40,6 +40,7 @@
             echo "<center>No books found in the library by the name $search </center>";
         ?>
         </table>
+        <a href="javascript:history.back()">Go Back</a>
 </body>
 
 </html>
