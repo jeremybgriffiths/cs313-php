@@ -25,9 +25,10 @@ session_start();
             FROM Books b 
             JOIN Checkout c ON c.bookid = b.id
             JOIN Users u ON u.id = c.userid"
-            // WHERE u.id = :userId;
-            // ORDER BY b.title
+            
     );
+    // WHERE u.id = :userId
+    // ORDER BY b.title
 
     //$stmt->bindValue(":userId", $userId);
 
