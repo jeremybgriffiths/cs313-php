@@ -1,6 +1,6 @@
 input[type=text],
 input[type=password] {
-    background-color: bisque;
+    background-color: #EEEEEE;
     border: none;
     color: black;
     width: auto;
@@ -23,6 +23,7 @@ input[type=reset] {
 }
 
 body {
+    background-color: bisque;
     text-align: right;
     margin: 50px 400px;
 }
