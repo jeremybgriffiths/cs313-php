@@ -22,8 +22,9 @@
     <div id="welcome"> Welcome <?php echo $username ?> </div>
     <div>
         <form id="options">
-            <button formaction="view-books.php">View Books</button>
+            <button formaction="view-books.php">View All Books</button>
             <button formaction="search-books.php">Search for a Book</button>
+            <button formaction="view-my-books.php">My Books</button>
         </form>
     </div>
 
