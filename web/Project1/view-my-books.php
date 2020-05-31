@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -13,7 +17,6 @@
     <?php
     include("../../db/connectToDb.php");
 
-    session_start();
     $userId = $_SESSION['userid'];
     echo 'User Id: ';
     echo $userId;

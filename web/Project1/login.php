@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html lang="en">
 
 <head>
@@ -9,7 +13,6 @@
 <body>
     <?php
     include_once("../../db/connectToDb.php");
-    session_start();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($_POST['username']) || empty($_POST['password'])) {
             echo
@@ -23,7 +26,7 @@
         $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
-        $isAdmin = (bool)$row["isadmin"];
+        $isAdmin = (bool) $row["isadmin"];
         $userid = $row["id"];
 
         if ($row && $inPassword == $passwordDB) {

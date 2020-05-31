@@ -1,5 +1,8 @@
-<html lang="en">
+<?php
+session_start();
+?>
 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +12,6 @@
 
 <body>
     <?php
-    session_start();
     $userid = $_SESSION['userid'];
     echo $userid;
     $username = $_SESSION['username'];
