@@ -24,9 +24,11 @@ session_start();
             FROM Books b
             JOIN Checkout c ON c.bookid = b.id
             JOIN Users u ON u.id = c.userid
-            WHERE u.id = $userId;
+            WHERE u.id = :userId;
             ORDER BY title"
     );
+
+    $stmt->bindValue(":userId", $userId);
 
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
