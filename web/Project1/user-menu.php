@@ -11,6 +11,7 @@
     <?php
     session_start();
     $userid = $_SESSION['userid'];
+    echo $userid;
     $username = $_SESSION['username'];
     ?>
 
