@@ -15,7 +15,8 @@
 
     $bookId = $_POST["book-id"];
 
-    $stmt = $db->prepare('DELETE FROM Books WHERE id = $bookId');
+    $stmt = $db->prepare('DELETE FROM Books WHERE id = :bookId');
+    $stmt->bindValue(':bookId', $bookId);
     $stmt->execute();
     ?>
 
