@@ -15,6 +15,7 @@
 
     session_start();
     $userId = $_SESSION['userid'];
+    echo 'User Id: ';
     echo $userId;
 
     $stmt = $db->prepare(
