@@ -13,6 +13,7 @@
     <?php
     include("../../db/connectToDb.php");
 
+    session_start();
     $userId = $_SESSION['userid'];
     echo $userId;
 
