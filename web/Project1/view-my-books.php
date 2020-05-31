@@ -13,13 +13,18 @@
     <?php
     include("../../db/connectToDb.php");
 
+    $userId = $_SESSION['userid'];
+    echo $userId;
+
     $stmt = $db->prepare(
         "SELECT id, title, author, genre, c.checkout_date
             FROM Books b
             JOIN Checkout c ON c.bookid = b.id
+            JOIN Users u ON u.id = c.userid
+            WHERE u.id = $userId;
             ORDER BY title"
     );
-    
+
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
