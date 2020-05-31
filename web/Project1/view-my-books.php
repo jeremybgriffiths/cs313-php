@@ -20,7 +20,7 @@ session_start();
     $userId = $_SESSION['userid'];
 
     $stmt = $db->prepare(
-        "SELECT b.id, b.title, b.author, b.genre, c.checkout_date
+        "SELECT b.title, b.author, b.genre, c.checkout_date
             FROM Books b
             JOIN Checkout c ON c.bookid = b.id
             JOIN Users u ON u.id = c.userid
