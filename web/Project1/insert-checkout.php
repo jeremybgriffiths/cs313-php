@@ -29,6 +29,7 @@
     <h3>Checkout information is inserted successfully</h3>
 
     <a href="view-issued-books.php">To view issued books click here</a>
+    <a href="javascript:history.back()">Go Back</a>
 
 </body>
 
