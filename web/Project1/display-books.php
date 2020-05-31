@@ -14,7 +14,7 @@
     include("../../db/connectToDb.php");
     $search = $_REQUEST["search"];
 
-    $stmt = $db->prepare("SELECT title, author, genre FROM Books WHERE LOWER(title) LIKE LOWER('%$search%') ORDER BY title");
+    $stmt = $db->prepare("SELECT id, title, author, genre FROM Books WHERE LOWER(title) LIKE LOWER('%$search%') ORDER BY title");
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -22,6 +22,7 @@
     ?>
         <table>
             <tr>
+                <th>Book Id</th>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Genre</th>
@@ -30,6 +31,7 @@
             <?php foreach ($rows as $row) {
             ?>
                 <tr>
+                    <td><?php echo $row["id"]; ?> </td>
                     <td><?php echo $row["title"]; ?> </td>
                     <td><?php echo $row["author"]; ?> </td>
                     <td><?php echo $row["genre"]; ?> </td>
