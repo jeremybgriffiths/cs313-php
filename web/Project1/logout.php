@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-$username = $_SESSION['username']; //retrieve the session variable
+$username = $_SESSION['username']; //retrieve the session variables
+$username = $_SESSION['userid']; 
 
 unset($_SESSION['username']); //to remove session variables
 unset($_SESSION['userid']);
