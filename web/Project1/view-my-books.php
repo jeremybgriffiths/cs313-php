@@ -28,7 +28,7 @@ session_start();
             // ORDER BY b.title
     );
 
-    $stmt->bindValue(":userId", $userId);
+    //$stmt->bindValue(":userId", $userId);
 
     $stmt->execute();
 
