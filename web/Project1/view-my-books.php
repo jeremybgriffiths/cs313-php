@@ -18,6 +18,7 @@ session_start();
     include("../../db/connectToDb.php");
 
     $userId = $_SESSION['userid'];
+    echo $userId;
 
     $stmt = $db->prepare(
         "SELECT b.title, b.author, b.genre, u.username, c.checkout_date 
