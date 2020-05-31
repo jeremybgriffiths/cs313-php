@@ -24,7 +24,7 @@
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = (bool)$row["isadmin"];
-        $userid = $row["userid"];
+        $userid = $row["id"];
 
         if ($row && $inPassword == $passwordDB) {
             $_SESSION['username'] = $inUsername;
