@@ -20,12 +20,12 @@ session_start();
     $userId = $_SESSION['userid'];
 
     $stmt = $db->prepare(
-        "SELECT b.title, b.author, b.genre, c.checkout_date
-            FROM Books b
+        "SELECT b.title, b.author, b.genre, u.username, c.checkout_date 
+            FROM Books b 
             JOIN Checkout c ON c.bookid = b.id
-            JOIN Users u ON u.id = c.userid
-            -- WHERE u.id = :userId;
-            -- ORDER BY b.title"
+            JOIN Users u ON u.id = c.userid"
+            // WHERE u.id = :userId;
+            // ORDER BY b.title
     );
 
     $stmt->bindValue(":userId", $userId);
