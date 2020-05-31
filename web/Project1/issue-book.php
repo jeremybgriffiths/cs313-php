@@ -13,11 +13,11 @@
         <table>
             <tr>
                 <td> Enter Book Id:</td>
-                <td> <input type="text" name="book-id" size="48"> </td>
+                <td> <input type="text" name="book-id" size="48" required> </td>
             </tr>
             <tr>
                 <td> Enter User Id:</td>
-                <td> <input type="text" name="user-id" size="48"> </td>
+                <td> <input type="text" name="user-id" size="48" required> </td>
             </tr>
             <tr>
                 <td></td>
