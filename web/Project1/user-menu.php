@@ -13,9 +13,7 @@ session_start();
 <body>
     <?php
     $userid = $_SESSION['userid'];
-    echo $userid;
     $username = $_SESSION['username'];
-    echo $username;
     ?>
 
     <header>
