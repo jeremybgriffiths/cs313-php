@@ -22,8 +22,8 @@ session_start();
 
         $inUsername = $_POST["username"];
         $inPassword = $_POST["password"];
-        $stmt = $db->prepare("SELECT username, userpassword, isadmin FROM Users WHERE username = ?");
-        $stmt->execute($inUsername);
+        $stmt = $db->prepare("SELECT id, username, userpassword, isadmin FROM Users WHERE username = ?");
+        $stmt->execute(array($inUsername));
         $row = $stmt->fetch();
         $passwordDB = $row["userpassword"];
         $isAdmin = (bool) $row["isadmin"];
