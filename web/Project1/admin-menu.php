@@ -27,6 +27,7 @@
             <button formaction="add-books.php">Add book</button>
             <button formaction="issue-book.php">Issue book</button>
             <button formaction="view-issued-books.php">View issued books</button>
+            <button formaction="remove-books.php">Remove book</button>
         </form>
     </div>
 
