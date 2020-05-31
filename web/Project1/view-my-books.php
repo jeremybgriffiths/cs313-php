@@ -37,7 +37,6 @@ error_reporting(E_ALL);
 
     $stmt->execute();
 
-    echo $stmt;
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if (count($rows) > 0) {
