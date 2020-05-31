@@ -13,15 +13,15 @@
         <table>
             <tr>
                 <td> Enter Title:</td>
-                <td> <input type="text" name="title" size="48"> </td>
+                <td> <input type="text" name="title" size="48" required> </td>
             </tr>
             <tr>
                 <td> Enter Author:</td>
-                <td> <input type="text" name="author" size="48"> </td>
+                <td> <input type="text" name="author" size="48" required> </td>
             </tr>
             <tr>
                 <td> Enter Genre:</td>
-                <td> <input type="text" name="genre" size="48"> </td>
+                <td> <input type="text" name="genre" size="48" required> </td>
             </tr>
             <tr>
                 <td></td>
