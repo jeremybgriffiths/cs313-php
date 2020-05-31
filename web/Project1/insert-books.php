@@ -29,6 +29,7 @@
     <h3> Book information is inserted successfully </h3>
 
     <a href="search-books.php"> To search for the Book information click here </a>
+    <a href="javascript:history.back()">Go Back</a>
 
 </body>
 
