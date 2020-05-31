@@ -21,19 +21,17 @@ error_reporting(E_ALL);
     include("../../db/connectToDb.php");
 
     $userId = $_SESSION['userid'];
-    echo $userId;
 
     $stmt = $db->prepare(
-        "SELECT b.title, b.author, b.genre, u.username, c.checkout_date 
+        "SELECT b.id, b.title, b.author, b.genre, u.username, c.checkout_date 
             FROM Books b 
             JOIN Checkout c ON c.bookid = b.id
-            JOIN Users u ON u.id = c.userid"
-            
+            JOIN Users u ON u.id = c.userid
+            WHERE u.id = :userId
+            ORDER BY b.title"
     );
-    // WHERE u.id = :userId
-    // ORDER BY b.title
-
-    //$stmt->bindValue(":userId", $userId);
+    
+    $stmt->bindValue(":userId", $userId);
 
     $stmt->execute();
 
