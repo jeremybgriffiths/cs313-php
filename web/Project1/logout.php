@@ -3,7 +3,8 @@
 session_start();
 $username = $_SESSION['username']; //retrieve the session variable
 
-unset($_SESSION['username']); //to remove session variable
+unset($_SESSION['username']); //to remove session variables
+unset($_SESSION['userid']);
 session_destroy(); //destroy the session
 header("location: login-form.php"); //to redirect back to "Login.php" after logging out
 exit();
