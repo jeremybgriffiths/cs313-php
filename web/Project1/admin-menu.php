@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -9,7 +12,6 @@
 
 <body>
     <?php
-    session_start();
     $username = $_SESSION['username'];
     ?>
 
