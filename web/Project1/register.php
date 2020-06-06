@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="styles/login-form.css">
     <title>Register User</title>
 
-    <script src="./scripts/validation.js"></script>
+    <script src="scripts/validation.js"></script>
 </head>
 
 <body>
