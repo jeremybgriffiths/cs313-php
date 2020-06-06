@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/login-form.css">
     <title>Register User</title>
 
@@ -47,13 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $message;
     echo "<form action= ' ' method='post' class=form-horizontal>";
 
-    echo "<div class='form-inline'>";
-    echo "<label for='usernameInput' class='control-label col-sm-1'>User Name:</label>";
+    echo "<div>";
+    echo "User Name: ";
     echo "<input type='text' name='userName' id='usernameInput' value='{$userName}'>";
     echo "</div>";
 
-    echo "<div class='form-inline'>";
-    echo "<label for='passwordInput' class='control-label col-sm-1'>Password:</label>";
+    echo "<div>";
+    echo "Password: ";
     echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='error' class='hidden'>*</span>";
     echo "<div>";
     echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
