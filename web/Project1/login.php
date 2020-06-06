@@ -18,6 +18,7 @@ session_start();
             echo
                 "Incorrect username or password";
             header("location: login-form.php");
+            die();
         }
 
         $inUsername = $_POST["username"];
@@ -29,7 +30,7 @@ session_start();
         $isAdmin = (bool) $row["isadmin"];
         $userid = $row["id"];
 
-        if ($row && $inPassword == $passwordDB) {
+        if ($row && password_verify($inPassword, $passwordDB)) {
             $_SESSION['username'] = $inUsername;
             $_SESSION['userid'] = $userid;
             $header = null;

@@ -27,11 +27,11 @@ CREATE TABLE Checkout (
 );
 
 -- Insert test data
-INSERT INTO Users(username, userpassword, isadmin) VALUES('admin', 'admin', TRUE);
-INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian1', 'librarian1', TRUE);
-INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian2', 'librarian2', TRUE);
-INSERT INTO Users(username, userpassword, isadmin) VALUES('patron1', 'patron1', FALSE);
-INSERT INTO Users(username, userpassword, isadmin) VALUES('patron2', 'patron2', FALSE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('admin', crypt('admin', gen_salt('bf', 8)), TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian1', crypt('librarian1', gen_salt('bf', 8)), TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('librarian2', crypt('librarian2', gen_salt('bf', 8)), TRUE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('patron1', crypt('patron1', gen_salt('bf', 8)), FALSE);
+INSERT INTO Users(username, userpassword, isadmin) VALUES('patron2', crypt('patron2', gen_salt('bf', 8)), FALSE);
 
 INSERT INTO Books(title, author, genre) VALUES('The Hobbit', 'Tolkien, J.R.R.', 'Fantasy');
 INSERT INTO Books(title, author, genre) VALUES('The Lord of the Rings: Fellowship of the Ring', 'Tolkien, J.R.R.', 'Fantasy');
