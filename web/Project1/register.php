@@ -53,15 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div>
             Password: <input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='error' class='hidden'></span>
             <div>
-                <small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
+                <small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small> <br>
             </div>
         </div>
 
         <div>
             Confirm Password: <input type='password' name='passwordConfirmation' id='passwordConfirmationInput' onkeyup='checkPassword()'>
-            <div>
-                <small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
-            </div>
         </div>
         <?php
         echo "<input type='hidden' name='action' value='{$actionValue}' onchange='checkPassword()>";

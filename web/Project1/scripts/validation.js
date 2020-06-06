@@ -12,14 +12,11 @@ function validate() {
 }
 
 function checkPassword() {
-    var passwordElement = 'passwordInput';
-    var confirmationpasswordElement = 'passwordConfirmationInput';
+    var userPassword = document.getElementById('passwordInput').value;
+    var confirmPassword = document.getElementById('passwordConfirmationInput').value;
 
-    var userPassword = document.getElementById(passwordElement).value;
-    var secondPassword = document.getElementById(confirmationpasswordElement).value;
-
-    if (userPassword != secondPassword) {
-        document.getElementById('error').innerHTML = '******** Passwords do not match';
+    if (userPassword != confirmPassword) {
+        document.getElementById('error').innerHTML = 'Passwords do not match';
         document.getElementById('error').classList = 'display: inline';
         document.getElementById('error').classList = 'text-danger';
     } else {
