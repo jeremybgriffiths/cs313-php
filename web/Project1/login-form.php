@@ -21,6 +21,7 @@
             <input type="reset" value="Reset"></input>
         </div>
     </form>
+    <p>Don't have an account? <a href="register.php">Register</a></p>
     <script src="scripts/validation.js"></script>
 </body>
 
