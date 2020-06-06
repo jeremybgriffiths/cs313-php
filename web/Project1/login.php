@@ -12,7 +12,7 @@ session_start();
 
 <body>
     <?php
-    include_once("../../db/connectToDb.php");
+    include("../../db/connectToDb.php");
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($_POST['username']) || empty($_POST['password'])) {
             echo
@@ -39,6 +39,7 @@ session_start();
                 $header = "location: user-menu.php";
             }
             header($header);
+            die();
         } else {
             echo "Incorrect username or password";
     ?>
