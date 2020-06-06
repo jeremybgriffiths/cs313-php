@@ -40,29 +40,29 @@ function registerForm($actionValue, $userName = '')
 
     echo "<div class='form-inline'>";
     echo "<label for='usernameInput' class='control-label col-sm-1'>User Name:</label>";
-    echo "<input type='text' name='userName' id='usernameInput' class='form-control' placeholder='Enter UserName' value='{$userName}'>";
+    echo "<input type='text' name='userName' id='usernameInput' value='{$userName}'>";
     echo "</div>";
 
     echo "<div class='form-inline'>";
     echo "<label for='passwordInput' class='control-label col-sm-1'>Password:</label>";
-    echo "<input type='password' name='password' id='passwordInput' class='form-control' placeholder='Enter password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='errorThing' class='hidden'>*</span>";
+    echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='errorThing' class='hidden'>*</span>";
 
     echo "<div>";
-    echo "<small id='passwordInputHelp' class='form-text text-muted'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
+    echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
     echo "</div>";
     echo "</div>";
 
     echo "<div class='form-inline'>";
-    echo "<label for='passwordConfirmationInput' class='control-label col-sm-1'>Password:</label>";
-    echo "<input type='password' name='passwordConfirmation' id='passwordConfirmationInput' class='form-control' placeholder='Enter password' onkeyup='checkPassword()'>";
+    echo "<label for='passwordConfirmationInput'>Confirm Password:</label>";
+    echo "<input type='password' name='passwordConfirmation' id='passwordConfirmationInput' onkeyup='checkPassword()'>";
 
     echo "<div>";
-    echo "<small id='passwordInputHelp' class='form-text text-muted'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
+    echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
     echo "</div>";
     echo "</div>";
 
-    echo "<input type='hidden' name='action' class='form-control' value='{$actionValue}' onchange='checkPassword()>";
+    echo "<input type='hidden' name='action' value='{$actionValue}' onchange='checkPassword()>";
     echo "<span id='passwordCheck'></span>";
-    echo "<input type='submit' class='btn btn-primary' value='Register'>";
+    echo "<input type='submit' value='Register'>";
     echo "</form>";
 }
