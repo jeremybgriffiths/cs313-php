@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "<input type='submit' value='Register'>";
     echo "</form>";
     ?>
-    <script src="./cs313-php/web/Project1/scripts/validation.js"></script>
+    <script src="./scripts/validation.js"></script>
 </body>
 
 </html>
