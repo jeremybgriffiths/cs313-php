@@ -45,7 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ?>
     <form action='' method='post' class=form-horizontal>
         <div>
-            User Name: <input type='text' name='username' id='usernameInput' value='{$username}'>
+            <?php
+            echo "User Name: <input type='text' name='username' id='usernameInput' value='{$username}'>";
+            ?>
         </div>
 
         <div>
