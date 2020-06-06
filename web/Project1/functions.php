@@ -45,7 +45,7 @@ function registerForm($actionValue, $userName = '')
 
     echo "<div class='form-inline'>";
     echo "<label for='passwordInput' class='control-label col-sm-1'>Password:</label>";
-    echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='errorThing' class='hidden'>*</span>";
+    echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='error' class='hidden'>*</span>";
 
     echo "<div>";
     echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
@@ -56,9 +56,6 @@ function registerForm($actionValue, $userName = '')
     echo "<label for='passwordConfirmationInput'>Confirm Password:</label>";
     echo "<input type='password' name='passwordConfirmation' id='passwordConfirmationInput' onkeyup='checkPassword()'>";
 
-    echo "<div>";
-    echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
-    echo "</div>";
     echo "</div>";
 
     echo "<input type='hidden' name='action' value='{$actionValue}' onchange='checkPassword()>";

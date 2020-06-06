@@ -4,7 +4,6 @@ require_once('functions.php');
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
     $username = validateInput($_POST['username']);
     $password = validateInput($_POST['password']);
     $passwordConfirmation = validateInput($_POST['passwordConfirmation']);
@@ -36,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="styles/login-form.css">
     <title>Register User</title>
 
-    <script src="javascript.js"></script>
+    <script src="validation.js"></script>
 </head>
 
 <body>

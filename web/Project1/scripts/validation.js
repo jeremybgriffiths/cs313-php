@@ -12,24 +12,17 @@ function validate() {
 }
 
 function checkPassword() {
-    // Element ID holding the original password
     var passwordElement = 'passwordInput';
-
-    // Element ID holding the 2nd password
     var confirmationpasswordElement = 'passwordConfirmationInput';
 
-    // Currently entered password
     var userPassword = document.getElementById(passwordElement).value;
-
     var secondPassword = document.getElementById(confirmationpasswordElement).value;
 
-    // If the passwords don't match, display the text. If they match, hide the message
     if (userPassword != secondPassword) {
-        document.getElementById('errorThing').innerHTML = '******** Passwords do not match';
-
-        document.getElementById('errorThing').classList = 'display: inline';
-        document.getElementById('errorThing').classList = 'text-danger';
+        document.getElementById('error').innerHTML = '******** Passwords do not match';
+        document.getElementById('error').classList = 'display: inline';
+        document.getElementById('error').classList = 'text-danger';
     } else {
-        document.getElementById('errorThing').classList = 'display: hidden';
+        document.getElementById('error').classList = 'display: hidden';
     }
 }
