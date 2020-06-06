@@ -33,8 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/login-form.css">
     <title>Register User</title>
-
-    <script src="scripts/validation.js"></script>
 </head>
 
 <body>
@@ -53,14 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "<div>";
     echo "Password: ";
-    echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='error' class='hidden'>*</span>";
+    echo "<input type='password' name='password' id='passwordInput' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'><span id='error' class='hidden'></span>";
     echo "<div>";
     echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
     echo "</div>";
     echo "</div>";
 
-    echo "<div class='form-inline'>";
-    echo "<label for='passwordConfirmationInput'>Confirm Password:</label>";
+    echo "<div>";
+    echo "Confirm Password: ";
     echo "<input type='password' name='passwordConfirmation' id='passwordConfirmationInput' onkeyup='checkPassword()'>";
     echo "<div>";
     echo "<small id='passwordInputHelp'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>";
@@ -72,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "<input type='submit' value='Register'>";
     echo "</form>";
     ?>
-
+    <script src="scripts/validation.js"></script>
 </body>
 
 </html>
