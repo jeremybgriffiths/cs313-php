@@ -1,6 +1,6 @@
 const http = require('http');
-const https = require('https');
 const url = require('url');
+const request = require('request');
 
 const server = http.createServer(onRequest);
 server.listen(8888);
@@ -23,8 +23,6 @@ function onRequest(req, res) {
         }));
         res.end();
     } else if (query.pathname === '/getApiData') {
-        const request = require('request');
-
         request('https://lozapi.glitch.me/games/', {
             json: true
         }, (error, response, body) => {
